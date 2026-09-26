@@ -34,7 +34,9 @@ struct ImLine
 inline bool operator==(const ImVec2& lhs, const ImVec2& rhs);
 inline bool operator!=(const ImVec2& lhs, const ImVec2& rhs);
 # endif
+# if IMGUI_VERSION_NUM < 19268 // Dear ImGui defines it since 1.92.7 WIP
 inline ImVec2 operator*(const float lhs, const ImVec2& rhs);
+# endif
 # if IMGUI_VERSION_NUM < 18955
 inline ImVec2 operator-(const ImVec2& lhs);
 # endif
